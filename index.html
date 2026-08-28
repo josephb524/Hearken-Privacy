@@ -79,8 +79,8 @@
 <body>
 
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Hearken: Sermon Notes &amp; Bible &middot; Last updated: August 25, 2026</p>
-    <p class="lang-switch"><a href="#espanol">Versión en español más abajo ↓</a></p>
+    <p class="last-updated">Hearken: Sermon Notes &amp; Bible &middot; Last updated: August 28, 2026</p>
+    <p class="lang-switch"><a href="support/">Support</a> &middot; <a href="#espanol">Versión en español más abajo ↓</a></p>
 
     <div class="section">
         <p><strong>Hearken</strong> is built so that the most personal thing you give it — your voice — never leaves your device. This policy explains exactly what the app processes, where, and why.</p>
@@ -96,8 +96,19 @@
     <h2>2. Your Audio Stays on Your Device</h2>
     <p>Transcription happens entirely on your iPhone or iPad. <strong>Your audio recordings are never uploaded, never sent to us, and never leave your device.</strong> They are stored locally in the app and you can delete them at any time from the app's Storage settings or by deleting a note.</p>
 
-    <h2>3. Text Sent to Our Servers</h2>
-    <p>When you create notes, generate a title, or ask a question about a sermon, the <em>text</em> of the transcript (never the audio) is sent over an encrypted connection to our server, which passes it to a language-model service provider to generate the result. This processing is transient: <strong>we do not store your transcripts, notes, or questions on our servers after your request completes, and your content is not used to train any models.</strong></p>
+    <h2>3. Text Sent to Our Server and to Fireworks AI</h2>
+    <p><strong>What is sent, and when.</strong> Only when you create notes, when a title is written for a note, or when you ask a question about a sermon, the <em>text</em> of the transcript (never the audio), your notes settings (language, length, sections, any custom instructions), and your question are sent over an encrypted connection (HTTPS) to our server.</p>
+    <p><strong>Who receives it.</strong> Our server is a Cloudflare Worker hosted by <strong>Cloudflare, Inc.</strong> It forwards that text to <strong>Fireworks AI, Inc.</strong>, the language-model provider that generates the notes, title, or answer, and returns the result to you. Nobody else receives it. See "Service providers" below for what each company does with it.</p>
+    <p><strong>Your permission first.</strong> Before the first note is written on a device, Hearken shows a consent screen that says exactly this, and sends nothing until you tap Allow. You can withdraw that permission at any time in Settings → Privacy ("Send text to write notes"); Hearken then asks again before the next note. Transcription stays on your device either way.</p>
+    <p><strong>Not kept, not used for training.</strong> This processing is transient: <strong>we do not store your transcripts, notes, or questions on our server after your request completes</strong>, Fireworks AI processes them under its zero-data-retention terms (below), and <strong>neither we nor Fireworks AI use your content to train any model.</strong></p>
+
+    <h2>3a. Service Providers</h2>
+    <p>These are the only companies that handle anything from Hearken, and what each one receives:</p>
+    <ul>
+        <li><strong>Apple Inc.</strong> — iCloud syncs your notes, folders, and question history in your private iCloud database under your Apple Account and <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>; Apple also sells and manages subscriptions. We never see your payment details.</li>
+        <li><strong>Cloudflare, Inc.</strong> — hosts our server. It sees the requests described above in transit (including your device's IP address, used to deliver the request and enforce abuse limits) under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</li>
+        <li><strong>Fireworks AI, Inc.</strong> — the language-model provider that writes your notes, titles, and answers from the text our server forwards. Fireworks AI states that it does not log or store prompt or generation data ("zero data retention" — the text exists only in memory for the duration of the request) and does not use API inputs to train or improve its models without an explicit opt-in, which we have not given. See its <a href="https://fireworks.ai/privacy-policy">privacy policy</a> and <a href="https://docs.fireworks.ai/guides/security_compliance/data_handling">data-handling terms</a>. We rely on those terms to give your text the same protection we promise here.</li>
+    </ul>
 
     <h2>4. Subscription Verification</h2>
     <p>To confirm an active Hearken Pro subscription, the app sends Apple's cryptographically signed subscription receipt to our server. We never receive your name, email address, or payment details — Apple processes all payments. A one-way hashed subscriber identifier is used server-side solely for abuse prevention (rate limits and daily usage caps).</p>
@@ -113,7 +124,7 @@
     </ul>
 
     <h2>7. Deleting Your Data</h2>
-    <p>Deleting a note in the app removes its transcript, notes, and audio from your device (and, via iCloud sync, from your other devices). Uninstalling the app removes all locally stored data. Because our servers retain nothing, there is nothing to delete on our side.</p>
+    <p>Deleting a note in the app removes its transcript, notes, and audio from your device (and, via iCloud sync, from your other devices). Uninstalling the app removes all locally stored data. Because our servers retain nothing, there is nothing to delete on our side. To stop text from being sent at all, turn off "Send text to write notes" in Settings → Privacy.</p>
 
     <h2>8. Children</h2>
     <p>Hearken does not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided personal information, please contact us.</p>
@@ -128,7 +139,7 @@
     <hr class="divider" id="espanol">
 
     <h1>Política de Privacidad</h1>
-    <p class="last-updated">Hearken: Notas de Sermón &middot; Última actualización: 25 de agosto de 2026</p>
+    <p class="last-updated">Hearken: Notas de Sermón &middot; Última actualización: 28 de agosto de 2026</p>
 
     <div class="section">
         <p><strong>Hearken</strong> está construida para que lo más personal que le confías — tu voz — nunca salga de tu dispositivo. Esta política explica exactamente qué procesa la app, dónde y por qué.</p>
@@ -144,8 +155,19 @@
     <h2>2. Tu audio se queda en tu dispositivo</h2>
     <p>La transcripción ocurre completamente en tu iPhone o iPad. <strong>Tus grabaciones de audio nunca se suben a internet, nunca se nos envían y nunca salen de tu dispositivo.</strong> Se guardan localmente en la app y puedes eliminarlas en cualquier momento desde los ajustes de Almacenamiento o al eliminar una nota.</p>
 
-    <h2>3. Texto enviado a nuestros servidores</h2>
-    <p>Cuando creas notas, se genera un título o haces una pregunta sobre un sermón, el <em>texto</em> de la transcripción (nunca el audio) se envía por una conexión cifrada a nuestro servidor, que lo pasa a un proveedor de modelos de lenguaje para generar el resultado. Este procesamiento es transitorio: <strong>no almacenamos tus transcripciones, notas ni preguntas en nuestros servidores después de completar tu solicitud, y tu contenido no se usa para entrenar ningún modelo.</strong></p>
+    <h2>3. Texto enviado a nuestro servidor y a Fireworks AI</h2>
+    <p><strong>Qué se envía, y cuándo.</strong> Solo cuando creas notas, cuando se escribe el título de una nota o cuando haces una pregunta sobre un sermón, el <em>texto</em> de la transcripción (nunca el audio), tus ajustes de notas (idioma, extensión, secciones, instrucciones personalizadas) y tu pregunta se envían por una conexión cifrada (HTTPS) a nuestro servidor.</p>
+    <p><strong>Quién lo recibe.</strong> Nuestro servidor es un Cloudflare Worker alojado por <strong>Cloudflare, Inc.</strong> Reenvía ese texto a <strong>Fireworks AI, Inc.</strong>, el proveedor de modelos de lenguaje que genera las notas, el título o la respuesta, y te devuelve el resultado. Nadie más lo recibe. Consulta «Proveedores de servicios» más abajo para saber qué hace cada empresa con él.</p>
+    <p><strong>Primero tu permiso.</strong> Antes de escribir la primera nota en un dispositivo, Hearken muestra una pantalla de consentimiento que dice exactamente esto y no envía nada hasta que tocas Permitir. Puedes retirar ese permiso cuando quieras en Ajustes → Privacidad («Enviar texto para escribir notas»); Hearken volverá a preguntar antes de la siguiente nota. La transcripción se queda en tu dispositivo en cualquier caso.</p>
+    <p><strong>No se conserva ni se usa para entrenar.</strong> Este procesamiento es transitorio: <strong>no almacenamos tus transcripciones, notas ni preguntas en nuestro servidor después de completar tu solicitud</strong>, Fireworks AI las procesa bajo sus términos de retención cero de datos (abajo), y <strong>ni nosotros ni Fireworks AI usamos tu contenido para entrenar ningún modelo.</strong></p>
+
+    <h2>3a. Proveedores de servicios</h2>
+    <p>Estas son las únicas empresas que manejan algo de Hearken, y lo que recibe cada una:</p>
+    <ul>
+        <li><strong>Apple Inc.</strong> — iCloud sincroniza tus notas, carpetas e historial de preguntas en tu base de datos privada de iCloud, bajo tu cuenta de Apple y la <a href="https://www.apple.com/legal/privacy/">política de privacidad de Apple</a>; Apple también vende y gestiona las suscripciones. Nunca vemos tus datos de pago.</li>
+        <li><strong>Cloudflare, Inc.</strong> — aloja nuestro servidor. Ve en tránsito las peticiones descritas arriba (incluida la dirección IP de tu dispositivo, usada para entregar la petición y aplicar límites contra abusos) bajo la <a href="https://www.cloudflare.com/privacypolicy/">política de privacidad de Cloudflare</a>.</li>
+        <li><strong>Fireworks AI, Inc.</strong> — el proveedor de modelos de lenguaje que escribe tus notas, títulos y respuestas a partir del texto que reenvía nuestro servidor. Fireworks AI declara que no registra ni almacena los datos de las peticiones ni de las respuestas («retención cero de datos»: el texto existe solo en memoria mientras dura la petición) y que no usa las entradas de su API para entrenar o mejorar sus modelos sin una aceptación explícita, que no hemos dado. Consulta su <a href="https://fireworks.ai/privacy-policy">política de privacidad</a> y sus <a href="https://docs.fireworks.ai/guides/security_compliance/data_handling">términos de tratamiento de datos</a>. Nos apoyamos en esos términos para dar a tu texto la misma protección que prometemos aquí.</li>
+    </ul>
 
     <h2>4. Verificación de la suscripción</h2>
     <p>Para confirmar una suscripción activa a Hearken Pro, la app envía a nuestro servidor el recibo de suscripción firmado criptográficamente por Apple. Nunca recibimos tu nombre, correo electrónico ni datos de pago — Apple procesa todos los pagos. Un identificador de suscriptor con hash unidireccional se usa en el servidor únicamente para prevenir abusos (límites de uso diarios).</p>
@@ -161,7 +183,7 @@
     </ul>
 
     <h2>7. Eliminar tus datos</h2>
-    <p>Eliminar una nota en la app borra su transcripción, sus notas y su audio de tu dispositivo (y, mediante iCloud, de tus otros dispositivos). Desinstalar la app elimina todos los datos guardados localmente. Como nuestros servidores no retienen nada, no hay nada que borrar de nuestro lado.</p>
+    <p>Eliminar una nota en la app borra su transcripción, sus notas y su audio de tu dispositivo (y, mediante iCloud, de tus otros dispositivos). Desinstalar la app elimina todos los datos guardados localmente. Como nuestros servidores no retienen nada, no hay nada que borrar de nuestro lado. Para que no se envíe texto en absoluto, desactiva «Enviar texto para escribir notas» en Ajustes → Privacidad.</p>
 
     <h2>8. Menores de edad</h2>
     <p>Hearken no recopila conscientemente información personal de menores de 13 años. Si eres padre, madre o tutor y crees que tu hijo nos ha proporcionado información personal, contáctanos.</p>
